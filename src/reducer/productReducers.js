@@ -40,6 +40,7 @@ const reducer = (state, action) => {
         single_product: action.payload,
         single_product_loading: false,
       }
+    default:
   }
 }
 

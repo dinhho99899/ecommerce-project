@@ -11,15 +11,17 @@ import { useProductsContext } from '../context/ProductsContext'
 const url = `https://course-api.com/react-store-single-product?id=`
 const SingleProduct = () => {
   const { id } = useParams()
-  useEffect(() => {
-    fetchSingleProduct(`${url}${id}`)
-  }, [fetchSingleProduct, id])
+
   const {
     single_product: product,
     fetchSingleProduct,
     single_product_loading: loading,
     isError,
   } = useProductsContext()
+  // eslint-disable-next-line
+  useEffect(() => {
+    fetchSingleProduct(`${url}${id}`)
+  }, [id])
   if (loading) {
     return <Wrapper>Loading...</Wrapper>
   }
