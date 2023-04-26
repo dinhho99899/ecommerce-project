@@ -20,7 +20,7 @@ const reducer = (state, action) => {
         isLoading: true,
       }
     case 'LOAD_SUCCESS':
-      const featuredProducts = action.payload.filter((e) => e.featured == true)
+      const featuredProducts = action.payload.filter((e) => e.featured === true)
       return {
         ...state,
         isLoading: false,

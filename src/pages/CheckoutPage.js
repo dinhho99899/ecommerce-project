@@ -42,7 +42,7 @@ const CheckoutPage = () => {
             <div className='cart-title'>
               <h4>Name</h4>
               <h4>Quantity</h4>
-              <h4></h4>
+              <hr />
             </div>
             <div className='cart-items'>
               {cart.map((item, index) => {

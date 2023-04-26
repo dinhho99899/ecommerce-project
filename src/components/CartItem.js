@@ -7,8 +7,6 @@ const CartItem = ({ image, id, name, color, price, amount }) => {
   const { toggleAmount, removeItem } = useCartContext()
   const increase = () => {
     toggleAmount(id, 'increase')
-
-    console.log('icre')
   }
   const decrease = () => {
     toggleAmount(id, 'decrease')

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
@@ -13,7 +13,7 @@ const SingleProduct = () => {
   const { id } = useParams()
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`)
-  }, [id])
+  }, [fetchSingleProduct, id])
   const {
     single_product: product,
     fetchSingleProduct,
@@ -53,7 +53,7 @@ const SingleProduct = () => {
             <p className='price'>${price / 1000}</p>
             <p>{description}</p>
             <p>Available: {stock > 0 ? 'In Stock' : 'Out Of Stock'}</p>
-            <p>SKU: {id}</p>
+            <p>SKU: {sku}</p>
             <p className='brand'>Brand: {company}</p>
             <div className='underline'></div>
             {stock <= 0 ? (

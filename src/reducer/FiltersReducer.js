@@ -23,7 +23,7 @@ const reducer = (state, action) => {
     case 'HANDLE_SORT':
       return { ...state, sort: action.payload }
     case 'SORT_PRODUCTS':
-      const { sort, filtered_products } = state
+      const { filtered_products } = state
       let temP = [...filtered_products]
 
       if (state.sort === 'price-lowest') {
@@ -67,12 +67,12 @@ const reducer = (state, action) => {
       }
       if (category !== 'all') {
         tempProducts = tempProducts.filter((e) => {
-          return e.category == category
+          return e.category === category
         })
       }
       if (company !== 'all') {
         tempProducts = tempProducts.filter((e) => {
-          return e.company == company
+          return e.company === company
         })
       }
       if (color !== 'all') {
@@ -88,6 +88,7 @@ const reducer = (state, action) => {
       //price
       tempProducts = tempProducts.filter((e) => e.price <= price)
       return { ...state, filtered_products: tempProducts }
+    default:
   }
 }
 export default reducer

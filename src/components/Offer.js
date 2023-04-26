@@ -18,7 +18,11 @@ const Offer = () => {
         <div className='section section-center products-section'>
           <article className='product'>
             <div className='img-container'>
-              <img src='./images/Banner.png' className='product-img'></img>
+              <img
+                src='./images/Banner.png'
+                className='product-img'
+                alt='img'
+              ></img>
               <div className='modal'>
                 <button className='img-btn btn'>Read More</button>
               </div>
@@ -33,7 +37,11 @@ const Offer = () => {
           </article>
           <article className='product'>
             <div className='img-container'>
-              <img src='./images/Banner.png' className='product-img'></img>
+              <img
+                src='./images/Banner.png'
+                className='product-img'
+                alt='l'
+              ></img>
               <div className='modal'>
                 <button className='img-btn btn'>Read More</button>
               </div>
@@ -48,7 +56,11 @@ const Offer = () => {
           </article>
           <article className='product'>
             <div className='img-container'>
-              <img src='./images/Banner.png' className='product-img'></img>
+              <img
+                src='./images/Banner.png'
+                className='product-img'
+                alt='l'
+              ></img>
               <div className='modal'>
                 <button className='img-btn btn'>Read More</button>
               </div>

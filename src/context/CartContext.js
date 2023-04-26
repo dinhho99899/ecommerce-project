@@ -23,19 +23,15 @@ const CartContext = ({ children }) => {
       payload: { id, amount, color, product, products },
     })
   }
-  const setLocalCart = () => {
-    localStorage.setItem('cart', JSON.stringify(state.cart))
-  }
   const removeItem = (id) => {
     dispatch({ type: 'REMOVE_ITEM', payload: id })
   }
   const toggleAmount = (idx, value) => {
-    console.log(idx)
     dispatch({ type: 'TOGGLE_AMOUNT', payload: { idx, value } })
   }
   useEffect(() => {
     dispatch({ type: 'HANDLE_TOTAL' })
-    setLocalCart()
+    localStorage.setItem('cart', JSON.stringify(state.cart))
   }, [state.cart])
   return (
     <Context.Provider value={{ ...state, addToCart, removeItem, toggleAmount }}>

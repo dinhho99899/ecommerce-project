@@ -21,7 +21,7 @@ const Testimonial = () => {
       clearInterval(inT)
     }
   }, [])
-  const { id, text, name, position, img, stars } = person
+  const { text, name, position, img, stars } = person
   return (
     <Wrapper>
       <div className='title'>

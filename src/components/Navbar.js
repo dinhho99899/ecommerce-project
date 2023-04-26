@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { BsSearch, BsFillMoonFill } from 'react-icons/bs'
+import { BsFillMoonFill } from 'react-icons/bs'
 import { FaBars } from 'react-icons/fa'
-import { AiOutlineShoppingCart, AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 import Links from './Links'
 import Logo from '../Logo.png'
 import { Link } from 'react-router-dom'
@@ -11,8 +11,7 @@ import { useProductsContext } from '../context/ProductsContext'
 import { useCartContext } from '../context/CartContext'
 import Sidebar from './Sidebar'
 const Navbar = () => {
-  const { isCartModal, toggleCartModal, toggleSidebar, isSidebarOpen } =
-    useProductsContext()
+  const { toggleCartModal, toggleSidebar, isSidebarOpen } = useProductsContext()
   const { total_item } = useCartContext()
   const getLocaltheme = () => {
     let theme = localStorage.getItem('theme')
@@ -23,10 +22,9 @@ const Navbar = () => {
     }
     return theme
   }
-  const setLocalStorage = () => {
-    localStorage.setItem('theme', JSON.stringify(theme))
-  }
-
+  useEffect(() => {
+    setLocalStorage()
+  }, [theme])
   const [theme, setTheme] = useState(getLocaltheme())
   const toggleTheme = () => {
     if (theme === 'dark-theme') {
@@ -39,7 +37,6 @@ const Navbar = () => {
 
   useEffect(() => {
     document.documentElement.className = theme
-    setLocalStorage()
   }, [theme])
   return (
     <Wrapper>

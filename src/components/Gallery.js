@@ -8,7 +8,7 @@ const Gallery = ({ images = [] }) => {
   return (
     <Wrapper className='gallery'>
       <div className='main'>
-        <img src={mainImg} className='main-img'></img>
+        <img src={mainImg} className='main-img' alt='main'></img>
       </div>
       <div className='btn-container'>
         {images?.map((image, indexx) => {
@@ -16,6 +16,7 @@ const Gallery = ({ images = [] }) => {
             <img
               key={indexx}
               src={image.url}
+              alt='img'
               className={index === indexx ? 'img active' : 'img'}
               onClick={() => {
                 setIndex(indexx)

@@ -12,7 +12,6 @@ import {
   Category,
   Testimonial,
 } from '../components/index'
-import { useProductsContext } from '../context/ProductsContext'
 const Home = () => {
   return (
     <main>

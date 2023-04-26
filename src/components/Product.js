@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import Stars from './Stars'
 import { BsSearch } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
-const Product = ({ id, image, name, price, stock }) => {
+const Product = ({ id, image, name, price }) => {
   return (
     <Wrapper className='product' key={id}>
       <div className='img-container'>
-        <img src={image} className='product-img'></img>
+        <img src={image} className='product-img' alt='name'></img>
         <div className='modal'>
           <Link to={`/products/${id}`} className='img-btn'>
             <BsSearch />

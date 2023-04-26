@@ -23,7 +23,6 @@ const reducer = (state, action) => {
         }
         return { ...state, cart: [...state.cart, newItem] }
       }
-
     case 'HANDLE_TOTAL':
       const { total_item, total_amount } = state.cart.reduce(
         (total, item) => {
@@ -61,6 +60,7 @@ const reducer = (state, action) => {
         return item
       })
       return { ...state, cart: tempCartItems }
+    default:
   }
 }
 

@@ -29,7 +29,7 @@ const Products = () => {
   const x = colors.flat()
   const cate = [...new Set(categories)]
   const comp = [...new Set(companies)]
-  const col = [, ...new Set(x)]
+  const col = [...new Set(x)]
 
   if (isLoading)
     return (
@@ -168,7 +168,6 @@ const Products = () => {
             </div>
             <div className='products-section'>
               {products.map((item) => {
-                const { id, name, price, image } = item
                 return <Product {...item} key={id} />
               })}
             </div>
