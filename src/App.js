@@ -1,11 +1,10 @@
-import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import { Navbar, Footer, Copyright } from './components'
 import Products from './pages/Products'
 import Cart from './pages/Cart'
 import Error from './pages/Error'
 import SingleProduct from './pages/SingleProduct'
-import Services from './pages/Services'
 import { About } from './pages/About'
 import CheckoutPage from './pages/CheckoutPage'
 function App() {

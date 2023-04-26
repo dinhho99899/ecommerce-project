@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { BsSearch } from 'react-icons/bs'
-import Stars from './Stars'
+
 import { Link } from 'react-router-dom'
 import { useProductsContext } from '../context/ProductsContext'
 import Product from './Product'
@@ -17,7 +16,6 @@ const FeaturedProducts = () => {
       </div>
       <div className='products-section'>
         {featured_products.map((e) => {
-          const { id, name, price, image } = e
           return <Product {...e} />
         })}
       </div>

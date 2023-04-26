@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import AmountBtns from '../components/AmountBtn'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 import { CartItem } from '../components'
 import FormRow from '../components/FormRow'
 import FormArea from '../components/FormArea'
 const CheckoutPage = () => {
-  const { cart, removeItem, toggleAmount, total_amount } = useCartContext()
+  const { cart, total_amount } = useCartContext()
   if (cart.length <= 0) {
     return (
       <Wrapper>

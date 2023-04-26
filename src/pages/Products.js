@@ -14,16 +14,7 @@ const Products = () => {
     handleSort,
     handleFilters,
     clearFilters,
-    filters: {
-      text,
-      category,
-      company,
-      color,
-      price,
-      min_price,
-      max_price,
-      shipping,
-    },
+    filters: { text, category, color, price, min_price, max_price, shipping },
   } = useFiltersContext()
   const { categories, companies, colors } = all_products.reduce(
     (total, item) => {

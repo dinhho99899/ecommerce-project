@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AiFillFacebook } from 'react-icons/ai'
 import Logo from '../Logo.png'
 const Footer = () => {
   return (

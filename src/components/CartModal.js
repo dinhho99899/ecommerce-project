@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Links from './Links'
 import { useProductsContext } from '../context/ProductsContext'
-import { RiDeleteBin6Fill } from 'react-icons/ri'
 import { AiOutlineClose } from 'react-icons/ai'
 import { useCartContext } from '../context/CartContext'
 import CartItem from './CartItem'
@@ -12,7 +10,7 @@ const CartModal = () => {
   const { cart } = useCartContext()
   console.log(cart)
   const { toggleCartModal } = useProductsContext()
-  const { removeItem, toggleAmount, total_amount } = useCartContext()
+  const { total_amount } = useCartContext()
 
   return (
     <Wrapper
