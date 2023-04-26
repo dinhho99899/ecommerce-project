@@ -22,9 +22,6 @@ const Navbar = () => {
     }
     return theme
   }
-  useEffect(() => {
-    setLocalStorage()
-  }, [theme])
   const [theme, setTheme] = useState(getLocaltheme())
   const toggleTheme = () => {
     if (theme === 'dark-theme') {
@@ -34,6 +31,10 @@ const Navbar = () => {
       setTheme('dark-theme')
     }
   }
+
+  useEffect(() => {
+    localStorage.setItem('theme', JSON.stringify(theme))
+  }, [theme])
 
   useEffect(() => {
     document.documentElement.className = theme

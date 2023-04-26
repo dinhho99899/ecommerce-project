@@ -168,7 +168,7 @@ const Products = () => {
             </div>
             <div className='products-section'>
               {products.map((item) => {
-                return <Product {...item} key={id} />
+                return <Product {...item} key={item.id} />
               })}
             </div>
           </div>
