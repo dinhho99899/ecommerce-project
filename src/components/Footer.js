@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo.png'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <Wrapper className='section-center '>
@@ -28,16 +29,16 @@ const Footer = () => {
           <h2>Utility Pages</h2>
           <ul>
             <li>
-              <a href='#'>About</a>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <a href='#'>Products</a>
+              <Link to='/products'>Shop</Link>
             </li>
             <li>
-              <a href='#'>Policy</a>
+              <Link to='/about'>About</Link>
             </li>
             <li>
-              <a href='#'>Services</a>
+              <Link to='/services'>Services</Link>
             </li>
           </ul>
         </div>

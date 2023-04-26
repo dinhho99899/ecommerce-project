@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CiMail } from 'react-icons/ci'
 import { GiCoconuts, GiChocolateBar } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
-import Breadcums from './Breadcums'
 const About = () => {
   return (
     <Wrapper className='section about-section section-center'>

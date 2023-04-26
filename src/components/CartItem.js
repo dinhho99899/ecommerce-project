@@ -16,7 +16,7 @@ const CartItem = ({ image, id, name, color, price, amount }) => {
   return (
     <Wrapper className='cart-item'>
       <div className='img-container'>
-        <img src={image} className='cart-img'></img>
+        <img src={image} className='cart-img' alt={name}></img>
         <div className='item-info'>
           <h4>
             Title:
