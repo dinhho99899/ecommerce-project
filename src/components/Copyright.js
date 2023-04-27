@@ -17,10 +17,10 @@ const Wrapper = styled.div`
   padding: 1rem 0;
   p {
     margin: 0;
-    color: var(--color4);
+    color: var(--color3);
   }
   span {
-    color: var(--color2);
+    color: var(--color3);
   }
 `
 export default Copyright

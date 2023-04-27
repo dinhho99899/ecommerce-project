@@ -24,7 +24,7 @@ const Product = ({ id, image, name, price }) => {
 }
 const Wrapper = styled.article`
   border-radius: 0.7rem;
-  background: var(--color5);
+  background: #f9f8f8;
   overflow: hidden;
   .img-container {
     position: relative;
@@ -67,13 +67,13 @@ const Wrapper = styled.article`
     transition: all 0.3s linear;
   }
   .name {
-    color: var(--color2);
+    color: var(--text-article);
     font-size: 1rem;
     text-transform: capitalize;
     padding: 0.5rem 1rem;
   }
   .price {
-    color: var(--color1);
+    color: var(--text-article);
     font-size: 0.8rem;
   }
 

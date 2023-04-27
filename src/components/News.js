@@ -83,7 +83,7 @@ const Wrapper = styled.section`
     width: 90%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    background: var(--color5);
+    background: var(--background);
     display: grid;
   }
   .news {
@@ -95,11 +95,13 @@ const Wrapper = styled.section`
     position: relative;
   }
   .new-img {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    border-radius: 1rem;
   }
   .date {
     position: absolute;
+
+    padding: 0.2rem;
+    font-size: 1rem;
     top: 1rem;
     left: 1rem;
     color: var(--color1);

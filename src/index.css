@@ -51,10 +51,11 @@
   --background-color2: #9ca3af;
   --background-nav: #f9f8f8;
   --transparent: transparent;
+  --text-article: #0c4a6e;
 }
 .dark-theme {
   --white: black;
-  --background: black;
+  --background: #274c5b;
   --grey-text: white;
   --primary5: #0891b2;
   --color1: white;
@@ -66,6 +67,7 @@
   --color-icon: white;
   --background-nav: black;
   --transparent: #fff;
+  --text-article: #0c4a6e;
 }
 ul {
   list-style-type: none;
@@ -175,6 +177,11 @@ body {
 }
 .btn:hover {
   background: var(--primary7);
+}
+@media screen and (min-width: 768px) {
+  .toggle-btn {
+    display: none;
+  }
 }
 /* section */
 .section {

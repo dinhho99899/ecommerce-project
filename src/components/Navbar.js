@@ -149,10 +149,5 @@ const Wrapper = styled.nav`
   .nav-btn:hover {
     color: var(--color-hover);
   }
-  @media screen and (min-width: 768px) {
-    .toggle-btn {
-      display: none;
-    }
-  }
 `
 export default Navbar
