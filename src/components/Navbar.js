@@ -65,7 +65,7 @@ const Navbar = () => {
               <span className='cart-items'>({total_item})</span>
             </div>
             <button
-              className={`${isSidebarOpen ? 'nav-btn toggle-btn' : 'nav-btn '}`}
+              className='toggle-btn'
               type='button'
               onClick={toggleSidebar}
             >
@@ -124,6 +124,18 @@ const Wrapper = styled.nav`
     transition: var(--transition);
   }
   .toggle-btn {
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    margin-right: 0.2rem;
+    color: var(--color-icon);
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .toggle-btn:hover {
     transform: rotate(90deg);
   }
   .cart-btn {
